@@ -8,6 +8,10 @@
     scroll-behavior: inherit !important
 }
 
+.mx-auto{
+    margin: 0 auto;
+}
+
 html,
 body {
     height: auto;
@@ -20,6 +24,7 @@ body {
 
 body {
     font-family: roboto, sans-serif;
+    /* font-family: 'Exo 2', sans-serif; */
     font-style: normal;
     font-size: 16px;
     font-weight: 400;
@@ -27,8 +32,15 @@ body {
     background: #000349;
     background: #120F28;
     background-image: -moz-linear-gradient(180deg, rgb(23 0 148) 0%, rgb(140 0 187) 100%);
-    background-image: -webkit-linear-gradient( 180deg, rgb(23 0 148) 0%, rgb(140 0 187) 100%);
-    background-image: -ms-linear-gradient( 180deg, rgb(23 0 148) 0%, rgb(140 0 187) 100%);
+    background-image: -webkit-linear-gradient(180deg, rgb(23 0 148) 0%, rgb(140 0 187) 100%);
+    background-image: -ms-linear-gradient(180deg, rgb(23 0 148) 0%, rgb(140 0 187) 100%);
+    /* background-image: url(../img/content/shining-bg.svg), -moz-linear-gradient(180deg, rgb(23 0 148) 0%, rgb(140 0 187) 100%);
+    background-image: url(../img/content/shining-bg.svg), -webkit-linear-gradient(180deg, rgb(23 0 148) 0%, rgb(140 0 187) 100%);
+    background-image: url(../img/content/shining-bg.svg), -ms-linear-gradient(180deg, rgb(23 0 148) 0%, rgb(140 0 187) 100%);
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: fixed;
+    background-size: 2000px, cover;
+    background-position: -800px -800px, center center; */
     line-height: 1.8
 }
 
@@ -71,8 +83,11 @@ h5,
 h6 {
     color: #1f2471;
     margin: 0;
-    font-weight: 600;
-    font-family: barlow, sans-serif;
+    font-weight: 700;
+    /* font-family: barlow, sans-serif; */
+    /* font-family: 'Oswald', sans-serif; */
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
     line-height: 1.2
 }
 
@@ -229,9 +244,9 @@ label {
 }
 
 .bg {
-    background-image: -moz-linear-gradient( 180deg, rgb(92,24,232) 0%, rgb(192,37,243) 100%);
-    background-image: -webkit-linear-gradient( 180deg, rgb(92,24,232) 0%, rgb(192,37,243) 100%);
-    background-image: -ms-linear-gradient( 180deg, rgb(92,24,232) 0%, rgb(192,37,243) 100%);
+    background-image: -moz-linear-gradient(180deg, rgb(92, 24, 232) 0%, rgb(192, 37, 243) 100%);
+    background-image: -webkit-linear-gradient(180deg, rgb(92, 24, 232) 0%, rgb(192, 37, 243) 100%);
+    background-image: -ms-linear-gradient(180deg, rgb(92, 24, 232) 0%, rgb(192, 37, 243) 100%);
     background: url(../img/shape/shape-bg-3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -241,6 +256,60 @@ label {
 
 .bg-2 {
     background: #f8f9ff
+}
+.swiper{
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+}
+
+.slide-wrap{
+height: 100%;
+max-width: 80%;
+margin: 0 auto;
+}
+.slide-wrap .heading-divider{
+
+    display: block;
+    margin: 12px 0 14px;
+}
+.slide-wrap .img-wrap{
+    width: 100%;
+    height: 100vh;
+    max-height: 480px;
+    border-radius: 150px 15px 0 0;
+    box-sizing: border-box;
+    border: 2px solid #B725FF;
+    overflow: hidden;
+}
+.slide-wrap img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.slide-text{
+    padding: 15px 30px 9px;
+    box-sizing: border-box;
+    width: 100%;
+    background: #1B173A;
+    border: 1px solid #2B316D;
+    border-radius: 0 0 15px 15px;
+}
+.slide-text .slide-title{
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+    font-size: 20px;
+    color: #fff;
+    /* text-align: center; */
+    text-transform: initial;
+    /* color: transparent;
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+    background: linear-gradient(to right, #518EFF, #518EFF, 50%, #B725FF 75%);
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    background-clip: text; */
 }
 
 .blur-bg-1 {
@@ -343,7 +412,7 @@ label {
     font-size: 18px;
     color: transparent;
     position: relative;
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
     -moz-background-clip: text;
     -webkit-background-clip: text;
     background-clip: text
@@ -356,13 +425,14 @@ label {
     height: 3px;
     margin-right: 10px;
     margin-bottom: 5px;
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% )
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%)
 }
 
 .site-title {
     font-weight: 700;
-    text-transform: capitalize;
-    font-size: 48px;
+    /* text-transform: capitalize; */
+    text-transform: uppercase;
+    font-size: 40px;
     color: #fff;
     margin-top: 5px;
     margin-bottom: 0
@@ -370,7 +440,7 @@ label {
 
 .site-title span {
     color: transparent;
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
     -moz-background-clip: text;
     -webkit-background-clip: text;
     background-clip: text
@@ -384,7 +454,7 @@ label {
     display: inline-block;
     position: relative;
     height: 4px;
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
     width: 90px;
     overflow: hidden
 }
@@ -665,25 +735,19 @@ label {
     border: none;
     background-size: 200% 100%;
     /* background-image: linear-gradient(to right, #518EFF 35%, #B725FF 88% ); */
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
-    
-    box-shadow: 0 3px 24px rgb(0 0 0/10%)
+    background: linear-gradient(to right, #518EFFff 35%, #B725FFff 88%);
+    border: 2px solid  #B725FF;
+    box-shadow: 0 3px 24px rgb(0 0 0/10%);
+    transform: scale(1);
 }
 
-.default-btn{
-    border-width: 1px;
-    border-style: solid;
-    border-image: linear-gradient(to right, #518EFF, #B725FF ) 1;
-    background: transparent;
-    height: 56px;
-    width: 170px;
-    margin-left: 14px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: var(--space-xs) var(--space-md);
-    cursor: pointer;
-    transition: color .2s;
+
+.theme-btn:hover{
+    /* transition: all ease 0.5s; */
+    border: 2px solid  #B725FFff;
+    background: linear-gradient(to right, #518EFF00 35%, #B725FF00 88%);
+    transform: scale(1.04);
+
 }
 
 .theme-btn:hover {
@@ -719,7 +783,7 @@ label {
     font-size: 22px;
     border: none;
     outline: none;
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
     color: #fff;
     cursor: pointer;
     width: 50px;
@@ -732,6 +796,15 @@ label {
 }
 
 @media all and (min-width:992px) {
+    body {
+        background-image: url(../img/content/shining-bg.svg), -moz-linear-gradient(180deg, rgb(23 0 148) 0%, rgb(140 0 187) 100%);
+        background-image: url(../img/content/shining-bg.svg), -webkit-linear-gradient(180deg, rgb(23 0 148) 0%, rgb(140 0 187) 100%);
+        background-image: url(../img/content/shining-bg.svg), -ms-linear-gradient(180deg, rgb(23 0 148) 0%, rgb(140 0 187) 100%);
+        background-repeat: no-repeat, no-repeat;
+        background-attachment: fixed;
+        background-size: 2000px, cover;
+        background-position: -960px -800px, center center;
+    }
     .navbar .nav-item .nav-link {
         margin-right: 28px;
         padding: 28px 0;
@@ -756,7 +829,7 @@ label {
         border: none;
         border-radius: 8px;
         width: 220px;
-        background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+        background: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
         box-shadow: 0 3px 24px rgb(0 0 0/10%)
     }
 
@@ -808,7 +881,7 @@ label {
     }
 
     .navbar .nav-item .dropdown-menu .dropdown-item:hover {
-        background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+        background: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
         color: #fff;
         padding-left: 33px
     }
@@ -821,7 +894,7 @@ label {
     .navbar .nav-item .nav-link::before {
         content: "";
         position: absolute;
-        background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+        background: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
         width: 0;
         height: 3px;
         bottom: 20px;
@@ -885,7 +958,7 @@ label {
     padding-top: 0;
     padding-bottom: 0;
     z-index: 999;
-    border-bottom: 1px solid rgba(255,255,255,0.20);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.20);
 }
 
 .navbar.fixed-top {
@@ -981,6 +1054,20 @@ button.navbar-toggler:focus {
 }
 
 @media all and (max-width:991px) {
+    .mt-mobile{
+        margin-top: 64px;
+    }
+    .slide-wrap .img-wrap{
+        max-height: 320px;
+    }
+
+    .slide-text .slide-title{
+        font-size: 16px;
+    }
+    .download-btn{
+        display: flex;
+        justify-content: center;
+    }
     .navbar {
         top: 0;
         right: 0;
@@ -1037,12 +1124,17 @@ button.navbar-toggler:focus {
 }
 
 .main {
-    margin-top: -6rem
+    margin-top: -6rem;
+}
+
+.align-items-center {
+    display: flex;
+    align-items: center;
 }
 
 .hero-wrapper {
-    padding-top: 140px;
-    padding-bottom: 260px;
+    padding-top: 136px;
+    padding-bottom: 136px;
     position: relative;
     /* background-image: -moz-linear-gradient( 180deg, rgb(92,24,232) 0%, rgb(192,37,243) 100%);
     background-image: -webkit-linear-gradient( 180deg, rgb(92,24,232) 0%, rgb(192,37,243) 100%);
@@ -1055,7 +1147,7 @@ button.navbar-toggler:focus {
     z-index: 1
 }
 
-.hero-shap-1 {
+.hero-shape-1 {
     position: absolute;
     background: rgba(255, 255, 255, .04);
     width: 40%;
@@ -1068,7 +1160,10 @@ button.navbar-toggler:focus {
 }
 
 .hero-shape img {
-    position: absolute
+    position: absolute;
+    width: 100%;
+    height: 120px;
+
 }
 
 .hero-shape-2 {
@@ -1095,7 +1190,7 @@ button.navbar-toggler:focus {
 }
 
 .hero-wrapper .hero-title {
-    font-size: 50px;
+    font-size: 52px;
     color: #fff;
     line-height: 1.2;
     /* text-transform: uppercase */
@@ -1104,7 +1199,7 @@ button.navbar-toggler:focus {
 .hero-wrapper .hero-title span {
     color: transparent;
     /* background: linear-gradient(to right, #518EFF 35%, #B725FF 88% ); */
-    background: linear-gradient( to right, #518EFF, #518EFF, 50%, #B725FF 75%);
+    background: linear-gradient(to right, #518EFF, #518EFF, 50%, #B725FF 75%);
     -moz-background-clip: text;
     -webkit-background-clip: text;
     background-clip: text
@@ -1195,7 +1290,7 @@ button.navbar-toggler:focus {
 .hero-sub-title {
     font-size: 2rem;
     font-weight: 500;
-    line-height: 1
+    /* line-height: 1 */
 }
 
 .hero-btn .video-btn {
@@ -1262,13 +1357,19 @@ button.navbar-toggler:focus {
 }
 
 @media all and (max-width:991px) {
-    .hero-single .hero-content .hero-title {
+    .hero-wrapper .hero-title {
+        text-align: center;
         font-size: 35px
     }
 
+    
+    
+    .hero-wrapper .hero-sub-title{
+        text-align: center;
+    }
     .hero-wrapper {
         padding-top: 260px;
-        padding-bottom: 160px
+        padding-bottom: 120px
     }
 
     .hero-wrapper .hero-title {
@@ -1358,7 +1459,7 @@ button.navbar-toggler:focus {
 
 .sale-countdown-title span {
     color: transparent;
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
     -moz-background-clip: text;
     -webkit-background-clip: text;
     background-clip: text
@@ -1428,7 +1529,7 @@ button.navbar-toggler:focus {
 .about-list li .icon span {
     font-size: 20px;
     color: transparent;
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
     -moz-background-clip: text;
     -webkit-background-clip: text;
     background-clip: text
@@ -1542,7 +1643,7 @@ button.navbar-toggler:focus {
 
 .token-sale-progress .countdown-single {
     text-align: center;
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% )
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%)
 }
 
 .token-progress-bar-content h5 {
@@ -1560,7 +1661,7 @@ button.navbar-toggler:focus {
 .token-progress-bar-content .progress-bar {
     border-radius: 8px;
     font-size: 25px;
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% )
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%)
 }
 
 .token-sale-target {
@@ -1818,7 +1919,7 @@ button.navbar-toggler:focus {
     top: 6.5%;
     right: -19px !important;
     z-index: 2;
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
     border-radius: 100%;
     transition: .3s;
     color: #fff;
@@ -1830,7 +1931,7 @@ button.navbar-toggler:focus {
 
 .road-map-timeline-list::after {
     content: '\f322';
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
     display: block;
     width: 45px;
     height: 45px;
@@ -1898,7 +1999,7 @@ button.navbar-toggler:focus {
 }
 
 .road-map-item-content h3 {
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
     margin: 0;
     padding: 8px 0 12px;
     color: #fff;
@@ -2112,7 +2213,7 @@ button.navbar-toggler:focus {
 }
 
 .timeline__content h3 {
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
     font-size: 18px;
     color: #fff;
     padding: 10px;
@@ -2187,7 +2288,7 @@ button.navbar-toggler:focus {
     transform: translateY(-50%);
     -webkit-border-radius: 50%;
     border-radius: 50%;
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
     border: none;
     font-family: 'font awesome 5 pro';
     font-style: normal;
@@ -2220,7 +2321,7 @@ button.navbar-toggler:focus {
 .timeline-divider::before {
     content: '';
     position: absolute;
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
     width: 30px;
     height: 30px;
     left: -17px;
@@ -2232,7 +2333,7 @@ button.navbar-toggler:focus {
 .timeline-divider::after {
     content: '';
     position: absolute;
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
     width: 30px;
     height: 30px;
     right: -19px;
@@ -2650,9 +2751,9 @@ button.timeline-nav-button:focus {
 
 .blockqoute {
     border-left: 5px solid #00adff;
-    background-image: -moz-linear-gradient( 180deg, rgb(92,24,232) 0%, rgb(192,37,243) 100%);
-    background-image: -webkit-linear-gradient( 180deg, rgb(92,24,232) 0%, rgb(192,37,243) 100%);
-    background-image: -ms-linear-gradient( 180deg, rgb(92,24,232) 0%, rgb(192,37,243) 100%);
+    background-image: -moz-linear-gradient(180deg, rgb(92, 24, 232) 0%, rgb(192, 37, 243) 100%);
+    background-image: -webkit-linear-gradient(180deg, rgb(92, 24, 232) 0%, rgb(192, 37, 243) 100%);
+    background-image: -ms-linear-gradient(180deg, rgb(92, 24, 232) 0%, rgb(192, 37, 243) 100%);
     padding: 30px;
     font-size: 17px;
     font-style: italic;
@@ -2693,7 +2794,7 @@ button.timeline-nav-button:focus {
 }
 
 .blog-details-tags ul a {
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
     color: #fff;
     padding: 4px 15px;
     border-radius: 50px;
@@ -2805,9 +2906,9 @@ button.timeline-nav-button:focus {
 
 .blog-comments-form {
     padding: 30px;
-    background-image: -moz-linear-gradient( 180deg, rgb(92,24,232) 0%, rgb(192,37,243) 100%);
-    background-image: -webkit-linear-gradient( 180deg, rgb(92,24,232) 0%, rgb(192,37,243) 100%);
-    background-image: -ms-linear-gradient( 180deg, rgb(92,24,232) 0%, rgb(192,37,243) 100%);
+    background-image: -moz-linear-gradient(180deg, rgb(92, 24, 232) 0%, rgb(192, 37, 243) 100%);
+    background-image: -webkit-linear-gradient(180deg, rgb(92, 24, 232) 0%, rgb(192, 37, 243) 100%);
+    background-image: -ms-linear-gradient(180deg, rgb(92, 24, 232) 0%, rgb(192, 37, 243) 100%);
     border-radius: 8px;
     margin-top: 70px
 }
@@ -2874,9 +2975,9 @@ button.timeline-nav-button:focus {
 }
 
 .widget {
-    background-image: -moz-linear-gradient( 180deg, rgb(92,24,232) 0%, rgb(192,37,243) 100%);
-    background-image: -webkit-linear-gradient( 180deg, rgb(92,24,232) 0%, rgb(192,37,243) 100%);
-    background-image: -ms-linear-gradient( 180deg, rgb(92,24,232) 0%, rgb(192,37,243) 100%);
+    background-image: -moz-linear-gradient(180deg, rgb(92, 24, 232) 0%, rgb(192, 37, 243) 100%);
+    background-image: -webkit-linear-gradient(180deg, rgb(92, 24, 232) 0%, rgb(192, 37, 243) 100%);
+    background-image: -ms-linear-gradient(180deg, rgb(92, 24, 232) 0%, rgb(192, 37, 243) 100%);
     padding: 30px;
     border-radius: 8px;
     margin-bottom: 30px
@@ -3021,7 +3122,7 @@ button.timeline-nav-button:focus {
 }
 
 .widget .tag-list a {
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
     color: #fff;
     padding: 4px 18px;
     margin-bottom: 10px;
@@ -3118,7 +3219,7 @@ button.timeline-nav-button:focus {
     top: 38px;
     transform: rotate(45deg);
     border-radius: 7px;
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% )
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%)
 }
 
 .contact-info-icon {
@@ -3129,7 +3230,7 @@ button.timeline-nav-button:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
     border-radius: 33% 66% 70% 30%/49% 62% 38% 51%
 }
 
@@ -3183,7 +3284,7 @@ button.timeline-nav-button:focus {
     left: 20px;
     right: 20px;
     bottom: -40px;
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
     text-align: center;
     padding: 5px 10px 5px 20px;
     border-radius: 8px;
@@ -3248,7 +3349,7 @@ button.timeline-nav-button:focus {
     line-height: 40px;
     border-radius: 50px;
     margin-top: 8px;
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% )
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%)
 }
 
 .team-social a:hover {
@@ -3356,7 +3457,7 @@ button.timeline-nav-button:focus {
     border-radius: 8px;
     padding: 5px;
     font-weight: 500;
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% )
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%)
 }
 
 .rating-item h3 {
@@ -3416,6 +3517,10 @@ button.timeline-nav-button:focus {
     line-height: 1
 }
 
+.btn-icon {
+    font-size: 24px;
+}
+
 @media all and (max-width:991px) {
     .download-content {
         margin-top: 40px
@@ -3463,7 +3568,7 @@ button.timeline-nav-button:focus {
     width: 45px;
     height: 45px;
     line-height: 45px;
-    background-image: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+    background-image: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
     border-radius: 50px;
     text-align: center;
     color: #fff
@@ -3520,9 +3625,9 @@ button.timeline-nav-button:focus {
     position: relative;
     padding-top: 190px;
     padding-bottom: 150px;
-    background-image: -moz-linear-gradient( 180deg, rgb(92,24,232) 0%, rgb(192,37,243) 100%);
-    background-image: -webkit-linear-gradient( 180deg, rgb(92,24,232) 0%, rgb(192,37,243) 100%);
-    background-image: -ms-linear-gradient( 180deg, rgb(92,24,232) 0%, rgb(192,37,243) 100%);
+    background-image: -moz-linear-gradient(180deg, rgb(92, 24, 232) 0%, rgb(192, 37, 243) 100%);
+    background-image: -webkit-linear-gradient(180deg, rgb(92, 24, 232) 0%, rgb(192, 37, 243) 100%);
+    background-image: -ms-linear-gradient(180deg, rgb(92, 24, 232) 0%, rgb(192, 37, 243) 100%);
     z-index: 1
 }
 
@@ -3624,7 +3729,7 @@ button.timeline-nav-button:focus {
 
 .pagination .page-link:hover,
 .pagination .page-item.active .page-link {
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% )
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%)
 }
 
 .login-form {
@@ -3872,7 +3977,7 @@ button.timeline-nav-button:focus {
     height: auto;
     border: none;
     border-radius: 8px;
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
     display: inline-block;
     color: #fff;
     padding-left: 30px;
@@ -3898,7 +4003,7 @@ button.timeline-nav-button:focus {
     border-radius: 50px;
     line-height: 40px;
     text-align: center;
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
     display: inline-block;
     transition: .5s
 }
@@ -3913,7 +4018,7 @@ button.timeline-nav-button:focus {
 }
 
 .countdown-single {
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
     padding: 20px;
     margin: 10px;
     border-radius: 8px;
@@ -4028,15 +4133,15 @@ button.timeline-nav-button:focus {
 }
 
 .footer-area {
-    background-image: -moz-linear-gradient( 180deg, rgb(92,24,232) 0%, rgb(192,37,243) 100%);
-    background-image: -webkit-linear-gradient( 180deg, rgb(92,24,232) 0%, rgb(192,37,243) 100%);
-    background-image: -ms-linear-gradient( 180deg, rgb(92,24,232) 0%, rgb(192,37,243) 100%);
+    background-image: -moz-linear-gradient(180deg, rgb(32 0 151) 0%, rgb(22 0 32) 100%);
+    background-image: -webkit-linear-gradient(180deg, rgb(32 0 151) 0%, rgb(22 0 32) 100%);
+    background-image: -ms-linear-gradient(180deg, rgb(32 0 151) 0%, rgb(22 0 32) 100%);
     position: relative;
     z-index: 1
 }
 
 .footer-widget-box {
-    margin-bottom: 20px
+    margin-bottom: 0px
 }
 
 .footer-widget {
@@ -4051,7 +4156,7 @@ button.timeline-nav-button:focus {
 
 .copyright {
     padding: 20px 0;
-    background: linear-gradient(to right, #160e6f 0%, #3e27be 50%, #160e6f 100%)
+    /* background: linear-gradient(to right, #160e6f 0%, #3e27be 50%, #160e6f 100%) */
 }
 
 .copyright .footer-menu {
@@ -4101,7 +4206,7 @@ button.timeline-nav-button:focus {
     z-index: -1;
     width: 15px;
     height: 3px;
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
     bottom: 0;
     left: 0
 }
@@ -4112,7 +4217,7 @@ button.timeline-nav-button:focus {
     z-index: -1;
     width: 35px;
     height: 3px;
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
     bottom: 0;
     left: 20px
 }
@@ -4147,7 +4252,7 @@ button.timeline-nav-button:focus {
 .footer-social {
     display: flex;
     gap: 15px;
-    margin-top: 30px
+    margin-top: 0
 }
 
 .footer-social li a i {
@@ -4156,7 +4261,7 @@ button.timeline-nav-button:focus {
     line-height: 40px;
     border-radius: 50px;
     text-align: center;
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
     color: #fff;
     transition: all .5s ease-in-out
 }
@@ -4225,13 +4330,13 @@ button.timeline-nav-button:focus {
 
 @media all and (max-width:1199px) {
     .footer-widget-box {
-        margin-bottom: 50px
+        margin-bottom: 0px
     }
 }
 
 @media all and (max-width:991px) {
     .footer-widget-wrapper {
-        padding-bottom: 0
+        padding-bottom: 64px
     }
 
     .copyright .footer-menu {
@@ -4244,11 +4349,19 @@ button.timeline-nav-button:focus {
         margin-left: 0;
         margin-right: 15px
     }
+    .copyright .copyright-text{
+        text-align: center;
+    }
 }
 
 @media all and (max-width:767px) {
     .footer-widget-wrapper {
-        padding-bottom: 0
+        padding-bottom: 64px
+    }
+
+    .footer-logo {
+        display: flex;
+        justify-content: center;
     }
 
     .footer-newsletter .subscribe-form .theme-btn {
@@ -4288,7 +4401,7 @@ button.timeline-nav-button:focus {
     margin: 0 auto;
     margin-top: -200px;
     text-align: center;
-    background: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
     text-align: center;
     width: 50px;
     height: 50px;
@@ -4351,7 +4464,7 @@ button.timeline-nav-button:focus {
     right: 10px;
     top: 7px;
     border-radius: 8px;
-    background-image: linear-gradient(to right, #518EFF 35%, #B725FF 88% );
+    background-image: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
     text-align: center;
     font-size: 20px;
     color: #fff !important;
@@ -4401,7 +4514,7 @@ button.timeline-nav-button:focus {
 
 .home-2 .bg {
     background: #2c0e76;
-    
+
 }
 
 .home-2 .hero-wrapper {
@@ -4427,6 +4540,15 @@ button.timeline-nav-button:focus {
 .home-2 .hero-wrapper .hero-sub-title {
     font-size: 20px;
     letter-spacing: 2px
+}
+
+.sub-title {
+    font-family: roboto;
+    font-size: 24px;
+    line-height: 1.5;
+    text-transform: initial;
+    font-weight: 400;
+    color: #fff;
 }
 
 .home-2 .hero-wrapper .hero-title {
@@ -4713,9 +4835,1654 @@ button.timeline-nav-button:focus {
     }
 }
 
-@media all and (max-width:991px) {
-    .hero-wrapper {
-        padding-top: 260px !important;
-        padding-bottom: 160px !important
+.firefly {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 0.4vw;
+    height: 0.4vw;
+    margin: -0.2vw 0 0 9.8vw;
+    animation: ease 200s alternate infinite;
+    pointer-events: none;
+}
+
+.firefly::before,
+.firefly::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform-origin: -10vw;
+}
+
+.firefly::before {
+    background: black;
+    opacity: 0.4;
+    animation: drift ease alternate infinite;
+}
+
+.firefly::after {
+    background: white;
+    opacity: 0;
+    box-shadow: 0 0 0vw 0vw #ff14ef;
+    animation: drift ease alternate infinite, flash ease infinite;
+}
+
+.firefly:nth-child(1) {
+    animation-name: move1;
+}
+
+.firefly:nth-child(1)::before {
+    animation-duration: 10s;
+}
+
+.firefly:nth-child(1)::after {
+    animation-duration: 10s, 6064ms;
+    animation-delay: 0ms, 6022ms;
+}
+
+@keyframes move1 {
+    0% {
+        transform: translateX(-18vw) translateY(19vh) scale(0.49);
+    }
+
+    4.54545% {
+        transform: translateX(49vw) translateY(8vh) scale(0.73);
+    }
+
+    9.09091% {
+        transform: translateX(-4vw) translateY(-45vh) scale(0.79);
+    }
+
+    13.63636% {
+        transform: translateX(31vw) translateY(-38vh) scale(0.61);
+    }
+
+    18.18182% {
+        transform: translateX(-18vw) translateY(-12vh) scale(0.43);
+    }
+
+    22.72727% {
+        transform: translateX(-21vw) translateY(35vh) scale(0.91);
+    }
+
+    27.27273% {
+        transform: translateX(50vw) translateY(46vh) scale(0.72);
+    }
+
+    31.81818% {
+        transform: translateX(-2vw) translateY(-20vh) scale(0.79);
+    }
+
+    36.36364% {
+        transform: translateX(28vw) translateY(-46vh) scale(0.29);
+    }
+
+    40.90909% {
+        transform: translateX(30vw) translateY(-8vh) scale(0.33);
+    }
+
+    45.45455% {
+        transform: translateX(-2vw) translateY(-19vh) scale(0.84);
+    }
+
+    50% {
+        transform: translateX(15vw) translateY(29vh) scale(0.73);
+    }
+
+    54.54545% {
+        transform: translateX(36vw) translateY(2vh) scale(0.8);
+    }
+
+    59.09091% {
+        transform: translateX(-43vw) translateY(21vh) scale(0.99);
+    }
+
+    63.63636% {
+        transform: translateX(-46vw) translateY(-29vh) scale(0.81);
+    }
+
+    68.18182% {
+        transform: translateX(20vw) translateY(50vh) scale(0.97);
+    }
+
+    72.72727% {
+        transform: translateX(37vw) translateY(17vh) scale(0.77);
+    }
+
+    77.27273% {
+        transform: translateX(43vw) translateY(-38vh) scale(0.72);
+    }
+
+    81.81818% {
+        transform: translateX(20vw) translateY(-28vh) scale(0.92);
+    }
+
+    86.36364% {
+        transform: translateX(12vw) translateY(-23vh) scale(0.31);
+    }
+
+    90.90909% {
+        transform: translateX(45vw) translateY(16vh) scale(0.28);
+    }
+
+    95.45455% {
+        transform: translateX(-36vw) translateY(-47vh) scale(0.47);
+    }
+
+    100% {
+        transform: translateX(-21vw) translateY(23vh) scale(0.6);
+    }
+}
+
+.firefly:nth-child(2) {
+    animation-name: move2;
+}
+
+.firefly:nth-child(2)::before {
+    animation-duration: 10s;
+}
+
+.firefly:nth-child(2)::after {
+    animation-duration: 10s, 9208ms;
+    animation-delay: 0ms, 1802ms;
+}
+
+@keyframes move2 {
+    0% {
+        transform: translateX(-6vw) translateY(12vh) scale(0.77);
+    }
+
+    5.55556% {
+        transform: translateX(17vw) translateY(15vh) scale(1);
+    }
+
+    11.11111% {
+        transform: translateX(-13vw) translateY(-2vh) scale(0.7);
+    }
+
+    16.66667% {
+        transform: translateX(-31vw) translateY(27vh) scale(0.6);
+    }
+
+    22.22222% {
+        transform: translateX(48vw) translateY(41vh) scale(0.81);
+    }
+
+    27.77778% {
+        transform: translateX(-48vw) translateY(-43vh) scale(0.26);
+    }
+
+    33.33333% {
+        transform: translateX(-20vw) translateY(2vh) scale(0.6);
+    }
+
+    38.88889% {
+        transform: translateX(-25vw) translateY(39vh) scale(0.92);
+    }
+
+    44.44444% {
+        transform: translateX(-10vw) translateY(36vh) scale(0.82);
+    }
+
+    50% {
+        transform: translateX(-18vw) translateY(0vh) scale(0.75);
+    }
+
+    55.55556% {
+        transform: translateX(25vw) translateY(-10vh) scale(0.35);
+    }
+
+    61.11111% {
+        transform: translateX(-28vw) translateY(25vh) scale(0.87);
+    }
+
+    66.66667% {
+        transform: translateX(-36vw) translateY(-46vh) scale(0.84);
+    }
+
+    72.22222% {
+        transform: translateX(16vw) translateY(-24vh) scale(0.59);
+    }
+
+    77.77778% {
+        transform: translateX(25vw) translateY(48vh) scale(1);
+    }
+
+    83.33333% {
+        transform: translateX(-35vw) translateY(-15vh) scale(0.76);
+    }
+
+    88.88889% {
+        transform: translateX(36vw) translateY(-41vh) scale(0.87);
+    }
+
+    94.44444% {
+        transform: translateX(-46vw) translateY(2vh) scale(0.91);
+    }
+
+    100% {
+        transform: translateX(-1vw) translateY(27vh) scale(0.91);
+    }
+}
+
+.firefly:nth-child(3) {
+    animation-name: move3;
+}
+
+.firefly:nth-child(3)::before {
+    animation-duration: 17s;
+}
+
+.firefly:nth-child(3)::after {
+    animation-duration: 17s, 6765ms;
+    animation-delay: 0ms, 1200ms;
+}
+
+@keyframes move3 {
+    0% {
+        transform: translateX(-47vw) translateY(-47vh) scale(0.8);
+    }
+
+    4.7619% {
+        transform: translateX(11vw) translateY(-24vh) scale(0.38);
+    }
+
+    9.52381% {
+        transform: translateX(8vw) translateY(-30vh) scale(0.71);
+    }
+
+    14.28571% {
+        transform: translateX(-25vw) translateY(-18vh) scale(0.26);
+    }
+
+    19.04762% {
+        transform: translateX(8vw) translateY(47vh) scale(0.3);
+    }
+
+    23.80952% {
+        transform: translateX(-14vw) translateY(17vh) scale(0.61);
+    }
+
+    28.57143% {
+        transform: translateX(43vw) translateY(29vh) scale(0.7);
+    }
+
+    33.33333% {
+        transform: translateX(-20vw) translateY(-28vh) scale(0.93);
+    }
+
+    38.09524% {
+        transform: translateX(27vw) translateY(-11vh) scale(0.41);
+    }
+
+    42.85714% {
+        transform: translateX(-11vw) translateY(14vh) scale(0.78);
+    }
+
+    47.61905% {
+        transform: translateX(-48vw) translateY(41vh) scale(0.34);
+    }
+
+    52.38095% {
+        transform: translateX(-9vw) translateY(30vh) scale(0.33);
+    }
+
+    57.14286% {
+        transform: translateX(-45vw) translateY(-17vh) scale(0.57);
+    }
+
+    61.90476% {
+        transform: translateX(19vw) translateY(-32vh) scale(0.69);
+    }
+
+    66.66667% {
+        transform: translateX(5vw) translateY(19vh) scale(0.94);
+    }
+
+    71.42857% {
+        transform: translateX(17vw) translateY(35vh) scale(0.66);
+    }
+
+    76.19048% {
+        transform: translateX(50vw) translateY(-18vh) scale(0.98);
+    }
+
+    80.95238% {
+        transform: translateX(45vw) translateY(15vh) scale(0.67);
+    }
+
+    85.71429% {
+        transform: translateX(7vw) translateY(20vh) scale(0.78);
+    }
+
+    90.47619% {
+        transform: translateX(-27vw) translateY(-8vh) scale(0.57);
+    }
+
+    95.2381% {
+        transform: translateX(-35vw) translateY(-21vh) scale(0.4);
+    }
+
+    100% {
+        transform: translateX(16vw) translateY(34vh) scale(0.93);
+    }
+}
+
+.firefly:nth-child(4) {
+    animation-name: move4;
+}
+
+.firefly:nth-child(4)::before {
+    animation-duration: 14s;
+}
+
+.firefly:nth-child(4)::after {
+    animation-duration: 14s, 7592ms;
+    animation-delay: 0ms, 1619ms;
+}
+
+@keyframes move4 {
+    0% {
+        transform: translateX(38vw) translateY(-14vh) scale(0.9);
+    }
+
+    5.55556% {
+        transform: translateX(5vw) translateY(-24vh) scale(0.46);
+    }
+
+    11.11111% {
+        transform: translateX(50vw) translateY(11vh) scale(0.96);
+    }
+
+    16.66667% {
+        transform: translateX(8vw) translateY(44vh) scale(0.55);
+    }
+
+    22.22222% {
+        transform: translateX(25vw) translateY(-25vh) scale(0.37);
+    }
+
+    27.77778% {
+        transform: translateX(30vw) translateY(33vh) scale(0.26);
+    }
+
+    33.33333% {
+        transform: translateX(44vw) translateY(37vh) scale(0.47);
+    }
+
+    38.88889% {
+        transform: translateX(49vw) translateY(39vh) scale(0.6);
+    }
+
+    44.44444% {
+        transform: translateX(-43vw) translateY(-4vh) scale(0.7);
+    }
+
+    50% {
+        transform: translateX(35vw) translateY(-41vh) scale(0.4);
+    }
+
+    55.55556% {
+        transform: translateX(8vw) translateY(3vh) scale(0.62);
+    }
+
+    61.11111% {
+        transform: translateX(-41vw) translateY(38vh) scale(0.63);
+    }
+
+    66.66667% {
+        transform: translateX(-16vw) translateY(-36vh) scale(0.55);
+    }
+
+    72.22222% {
+        transform: translateX(19vw) translateY(18vh) scale(0.89);
+    }
+
+    77.77778% {
+        transform: translateX(-13vw) translateY(17vh) scale(0.7);
+    }
+
+    83.33333% {
+        transform: translateX(-42vw) translateY(-22vh) scale(0.26);
+    }
+
+    88.88889% {
+        transform: translateX(38vw) translateY(30vh) scale(0.99);
+    }
+
+    94.44444% {
+        transform: translateX(29vw) translateY(24vh) scale(0.74);
+    }
+
+    100% {
+        transform: translateX(-43vw) translateY(22vh) scale(0.37);
+    }
+}
+
+.firefly:nth-child(5) {
+    animation-name: move5;
+}
+
+.firefly:nth-child(5)::before {
+    animation-duration: 9s;
+}
+
+.firefly:nth-child(5)::after {
+    animation-duration: 9s, 6788ms;
+    animation-delay: 0ms, 6871ms;
+}
+
+@keyframes move5 {
+    0% {
+        transform: translateX(-41vw) translateY(32vh) scale(0.43);
+    }
+
+    4% {
+        transform: translateX(-21vw) translateY(-13vh) scale(0.76);
+    }
+
+    8% {
+        transform: translateX(13vw) translateY(-40vh) scale(0.67);
+    }
+
+    12% {
+        transform: translateX(5vw) translateY(24vh) scale(0.34);
+    }
+
+    16% {
+        transform: translateX(19vw) translateY(1vh) scale(0.87);
+    }
+
+    20% {
+        transform: translateX(-21vw) translateY(38vh) scale(0.72);
+    }
+
+    24% {
+        transform: translateX(13vw) translateY(-15vh) scale(0.98);
+    }
+
+    28% {
+        transform: translateX(24vw) translateY(28vh) scale(0.36);
+    }
+
+    32% {
+        transform: translateX(27vw) translateY(3vh) scale(0.46);
+    }
+
+    36% {
+        transform: translateX(21vw) translateY(39vh) scale(0.8);
+    }
+
+    40% {
+        transform: translateX(-43vw) translateY(-5vh) scale(0.36);
+    }
+
+    44% {
+        transform: translateX(-24vw) translateY(-13vh) scale(0.85);
+    }
+
+    48% {
+        transform: translateX(16vw) translateY(24vh) scale(0.88);
+    }
+
+    52% {
+        transform: translateX(5vw) translateY(28vh) scale(0.29);
+    }
+
+    56% {
+        transform: translateX(-25vw) translateY(2vh) scale(0.88);
+    }
+
+    60% {
+        transform: translateX(43vw) translateY(-45vh) scale(0.28);
+    }
+
+    64% {
+        transform: translateX(36vw) translateY(-32vh) scale(0.55);
+    }
+
+    68% {
+        transform: translateX(-23vw) translateY(-22vh) scale(0.48);
+    }
+
+    72% {
+        transform: translateX(39vw) translateY(-17vh) scale(0.28);
+    }
+
+    76% {
+        transform: translateX(41vw) translateY(37vh) scale(0.83);
+    }
+
+    80% {
+        transform: translateX(-30vw) translateY(-44vh) scale(0.47);
+    }
+
+    84% {
+        transform: translateX(25vw) translateY(-27vh) scale(0.82);
+    }
+
+    88% {
+        transform: translateX(-19vw) translateY(-45vh) scale(0.84);
+    }
+
+    92% {
+        transform: translateX(39vw) translateY(-22vh) scale(0.67);
+    }
+
+    96% {
+        transform: translateX(8vw) translateY(-27vh) scale(0.8);
+    }
+
+    100% {
+        transform: translateX(-30vw) translateY(-16vh) scale(0.98);
+    }
+}
+
+.firefly:nth-child(6) {
+    animation-name: move6;
+}
+
+.firefly:nth-child(6)::before {
+    animation-duration: 16s;
+}
+
+.firefly:nth-child(6)::after {
+    animation-duration: 16s, 7075ms;
+    animation-delay: 0ms, 7973ms;
+}
+
+@keyframes move6 {
+    0% {
+        transform: translateX(-11vw) translateY(33vh) scale(0.6);
+    }
+
+    3.7037% {
+        transform: translateX(23vw) translateY(1vh) scale(0.92);
+    }
+
+    7.40741% {
+        transform: translateX(-1vw) translateY(-26vh) scale(0.36);
+    }
+
+    11.11111% {
+        transform: translateX(4vw) translateY(-13vh) scale(0.42);
+    }
+
+    14.81481% {
+        transform: translateX(-17vw) translateY(6vh) scale(0.89);
+    }
+
+    18.51852% {
+        transform: translateX(-43vw) translateY(-32vh) scale(0.91);
+    }
+
+    22.22222% {
+        transform: translateX(40vw) translateY(17vh) scale(0.53);
+    }
+
+    25.92593% {
+        transform: translateX(39vw) translateY(-19vh) scale(0.62);
+    }
+
+    29.62963% {
+        transform: translateX(48vw) translateY(-43vh) scale(0.5);
+    }
+
+    33.33333% {
+        transform: translateX(-19vw) translateY(27vh) scale(0.74);
+    }
+
+    37.03704% {
+        transform: translateX(-36vw) translateY(27vh) scale(0.68);
+    }
+
+    40.74074% {
+        transform: translateX(-19vw) translateY(-26vh) scale(0.95);
+    }
+
+    44.44444% {
+        transform: translateX(-48vw) translateY(14vh) scale(0.78);
+    }
+
+    48.14815% {
+        transform: translateX(27vw) translateY(-9vh) scale(0.88);
+    }
+
+    51.85185% {
+        transform: translateX(11vw) translateY(-34vh) scale(0.5);
+    }
+
+    55.55556% {
+        transform: translateX(-17vw) translateY(48vh) scale(0.4);
+    }
+
+    59.25926% {
+        transform: translateX(22vw) translateY(24vh) scale(0.65);
+    }
+
+    62.96296% {
+        transform: translateX(19vw) translateY(28vh) scale(0.99);
+    }
+
+    66.66667% {
+        transform: translateX(42vw) translateY(-17vh) scale(0.86);
+    }
+
+    70.37037% {
+        transform: translateX(6vw) translateY(16vh) scale(0.65);
+    }
+
+    74.07407% {
+        transform: translateX(2vw) translateY(-3vh) scale(0.65);
+    }
+
+    77.77778% {
+        transform: translateX(40vw) translateY(11vh) scale(0.3);
+    }
+
+    81.48148% {
+        transform: translateX(-37vw) translateY(47vh) scale(0.62);
+    }
+
+    85.18519% {
+        transform: translateX(-30vw) translateY(26vh) scale(0.91);
+    }
+
+    88.88889% {
+        transform: translateX(-47vw) translateY(-36vh) scale(0.93);
+    }
+
+    92.59259% {
+        transform: translateX(45vw) translateY(22vh) scale(0.84);
+    }
+
+    96.2963% {
+        transform: translateX(-9vw) translateY(-38vh) scale(0.5);
+    }
+
+    100% {
+        transform: translateX(11vw) translateY(-2vh) scale(0.9);
+    }
+}
+
+.firefly:nth-child(7) {
+    animation-name: move7;
+}
+
+.firefly:nth-child(7)::before {
+    animation-duration: 15s;
+}
+
+.firefly:nth-child(7)::after {
+    animation-duration: 15s, 9821ms;
+    animation-delay: 0ms, 2430ms;
+}
+
+@keyframes move7 {
+    0% {
+        transform: translateX(43vw) translateY(48vh) scale(0.97);
+    }
+
+    4.7619% {
+        transform: translateX(31vw) translateY(27vh) scale(0.45);
+    }
+
+    9.52381% {
+        transform: translateX(27vw) translateY(22vh) scale(0.41);
+    }
+
+    14.28571% {
+        transform: translateX(12vw) translateY(29vh) scale(0.77);
+    }
+
+    19.04762% {
+        transform: translateX(-16vw) translateY(48vh) scale(0.91);
+    }
+
+    23.80952% {
+        transform: translateX(40vw) translateY(-34vh) scale(0.34);
+    }
+
+    28.57143% {
+        transform: translateX(-44vw) translateY(-20vh) scale(0.49);
+    }
+
+    33.33333% {
+        transform: translateX(31vw) translateY(28vh) scale(0.69);
+    }
+
+    38.09524% {
+        transform: translateX(45vw) translateY(22vh) scale(0.94);
+    }
+
+    42.85714% {
+        transform: translateX(-48vw) translateY(-32vh) scale(0.69);
+    }
+
+    47.61905% {
+        transform: translateX(-20vw) translateY(42vh) scale(0.8);
+    }
+
+    52.38095% {
+        transform: translateX(21vw) translateY(24vh) scale(0.81);
+    }
+
+    57.14286% {
+        transform: translateX(-30vw) translateY(-27vh) scale(0.75);
+    }
+
+    61.90476% {
+        transform: translateX(-12vw) translateY(34vh) scale(0.26);
+    }
+
+    66.66667% {
+        transform: translateX(50vw) translateY(16vh) scale(0.58);
+    }
+
+    71.42857% {
+        transform: translateX(3vw) translateY(29vh) scale(0.49);
+    }
+
+    76.19048% {
+        transform: translateX(14vw) translateY(14vh) scale(0.53);
+    }
+
+    80.95238% {
+        transform: translateX(30vw) translateY(-29vh) scale(0.26);
+    }
+
+    85.71429% {
+        transform: translateX(37vw) translateY(-24vh) scale(0.53);
+    }
+
+    90.47619% {
+        transform: translateX(-27vw) translateY(-23vh) scale(0.48);
+    }
+
+    95.2381% {
+        transform: translateX(-38vw) translateY(45vh) scale(0.73);
+    }
+
+    100% {
+        transform: translateX(-34vw) translateY(24vh) scale(0.99);
+    }
+}
+
+.firefly:nth-child(8) {
+    animation-name: move8;
+}
+
+.firefly:nth-child(8)::before {
+    animation-duration: 16s;
+}
+
+.firefly:nth-child(8)::after {
+    animation-duration: 16s, 9747ms;
+    animation-delay: 0ms, 5159ms;
+}
+
+@keyframes move8 {
+    0% {
+        transform: translateX(9vw) translateY(9vh) scale(0.67);
+    }
+
+    5.26316% {
+        transform: translateX(12vw) translateY(-9vh) scale(0.89);
+    }
+
+    10.52632% {
+        transform: translateX(28vw) translateY(41vh) scale(0.36);
+    }
+
+    15.78947% {
+        transform: translateX(-11vw) translateY(25vh) scale(0.8);
+    }
+
+    21.05263% {
+        transform: translateX(-14vw) translateY(42vh) scale(0.54);
+    }
+
+    26.31579% {
+        transform: translateX(-43vw) translateY(38vh) scale(0.67);
+    }
+
+    31.57895% {
+        transform: translateX(-32vw) translateY(8vh) scale(0.73);
+    }
+
+    36.84211% {
+        transform: translateX(-29vw) translateY(30vh) scale(0.85);
+    }
+
+    42.10526% {
+        transform: translateX(-22vw) translateY(-18vh) scale(0.35);
+    }
+
+    47.36842% {
+        transform: translateX(-10vw) translateY(-32vh) scale(0.42);
+    }
+
+    52.63158% {
+        transform: translateX(-6vw) translateY(-22vh) scale(0.98);
+    }
+
+    57.89474% {
+        transform: translateX(45vw) translateY(-24vh) scale(0.99);
+    }
+
+    63.15789% {
+        transform: translateX(5vw) translateY(-36vh) scale(0.87);
+    }
+
+    68.42105% {
+        transform: translateX(34vw) translateY(-36vh) scale(0.52);
+    }
+
+    73.68421% {
+        transform: translateX(38vw) translateY(14vh) scale(0.29);
+    }
+
+    78.94737% {
+        transform: translateX(-24vw) translateY(14vh) scale(0.41);
+    }
+
+    84.21053% {
+        transform: translateX(22vw) translateY(35vh) scale(0.45);
+    }
+
+    89.47368% {
+        transform: translateX(22vw) translateY(37vh) scale(0.64);
+    }
+
+    94.73684% {
+        transform: translateX(45vw) translateY(12vh) scale(0.53);
+    }
+
+    100% {
+        transform: translateX(-20vw) translateY(-6vh) scale(0.96);
+    }
+}
+
+.firefly:nth-child(9) {
+    animation-name: move9;
+}
+
+.firefly:nth-child(9)::before {
+    animation-duration: 11s;
+}
+
+.firefly:nth-child(9)::after {
+    animation-duration: 11s, 10307ms;
+    animation-delay: 0ms, 1158ms;
+}
+
+@keyframes move9 {
+    0% {
+        transform: translateX(-20vw) translateY(-1vh) scale(0.39);
+    }
+
+    4.34783% {
+        transform: translateX(28vw) translateY(-22vh) scale(0.57);
+    }
+
+    8.69565% {
+        transform: translateX(-28vw) translateY(21vh) scale(0.61);
+    }
+
+    13.04348% {
+        transform: translateX(-40vw) translateY(32vh) scale(0.98);
+    }
+
+    17.3913% {
+        transform: translateX(-17vw) translateY(3vh) scale(0.38);
+    }
+
+    21.73913% {
+        transform: translateX(38vw) translateY(32vh) scale(0.3);
+    }
+
+    26.08696% {
+        transform: translateX(39vw) translateY(-15vh) scale(0.27);
+    }
+
+    30.43478% {
+        transform: translateX(-46vw) translateY(-13vh) scale(0.85);
+    }
+
+    34.78261% {
+        transform: translateX(44vw) translateY(-48vh) scale(0.85);
+    }
+
+    39.13043% {
+        transform: translateX(-7vw) translateY(-22vh) scale(0.71);
+    }
+
+    43.47826% {
+        transform: translateX(-19vw) translateY(21vh) scale(0.76);
+    }
+
+    47.82609% {
+        transform: translateX(20vw) translateY(-25vh) scale(0.65);
+    }
+
+    52.17391% {
+        transform: translateX(-2vw) translateY(16vh) scale(0.51);
+    }
+
+    56.52174% {
+        transform: translateX(-49vw) translateY(28vh) scale(0.39);
+    }
+
+    60.86957% {
+        transform: translateX(-17vw) translateY(11vh) scale(0.43);
+    }
+
+    65.21739% {
+        transform: translateX(-24vw) translateY(-46vh) scale(0.72);
+    }
+
+    69.56522% {
+        transform: translateX(36vw) translateY(17vh) scale(0.67);
+    }
+
+    73.91304% {
+        transform: translateX(49vw) translateY(-28vh) scale(0.59);
+    }
+
+    78.26087% {
+        transform: translateX(14vw) translateY(-46vh) scale(0.37);
+    }
+
+    82.6087% {
+        transform: translateX(29vw) translateY(18vh) scale(0.33);
+    }
+
+    86.95652% {
+        transform: translateX(-2vw) translateY(-8vh) scale(0.86);
+    }
+
+    91.30435% {
+        transform: translateX(45vw) translateY(14vh) scale(1);
+    }
+
+    95.65217% {
+        transform: translateX(39vw) translateY(-31vh) scale(0.73);
+    }
+
+    100% {
+        transform: translateX(4vw) translateY(-18vh) scale(0.51);
+    }
+}
+
+.firefly:nth-child(10) {
+    animation-name: move10;
+}
+
+.firefly:nth-child(10)::before {
+    animation-duration: 17s;
+}
+
+.firefly:nth-child(10)::after {
+    animation-duration: 17s, 5450ms;
+    animation-delay: 0ms, 3191ms;
+}
+
+@keyframes move10 {
+    0% {
+        transform: translateX(-20vw) translateY(-23vh) scale(0.89);
+    }
+
+    5% {
+        transform: translateX(46vw) translateY(-42vh) scale(0.8);
+    }
+
+    10% {
+        transform: translateX(-38vw) translateY(-30vh) scale(0.96);
+    }
+
+    15% {
+        transform: translateX(0vw) translateY(-9vh) scale(1);
+    }
+
+    20% {
+        transform: translateX(9vw) translateY(-25vh) scale(0.81);
+    }
+
+    25% {
+        transform: translateX(-21vw) translateY(-3vh) scale(0.75);
+    }
+
+    30% {
+        transform: translateX(23vw) translateY(34vh) scale(0.74);
+    }
+
+    35% {
+        transform: translateX(-6vw) translateY(-12vh) scale(0.41);
+    }
+
+    40% {
+        transform: translateX(5vw) translateY(38vh) scale(0.74);
+    }
+
+    45% {
+        transform: translateX(41vw) translateY(-1vh) scale(0.35);
+    }
+
+    50% {
+        transform: translateX(44vw) translateY(-41vh) scale(0.73);
+    }
+
+    55% {
+        transform: translateX(-2vw) translateY(4vh) scale(0.37);
+    }
+
+    60% {
+        transform: translateX(6vw) translateY(-10vh) scale(0.89);
+    }
+
+    65% {
+        transform: translateX(-10vw) translateY(-9vh) scale(0.63);
+    }
+
+    70% {
+        transform: translateX(44vw) translateY(34vh) scale(0.69);
+    }
+
+    75% {
+        transform: translateX(-4vw) translateY(-29vh) scale(0.62);
+    }
+
+    80% {
+        transform: translateX(-49vw) translateY(0vh) scale(0.93);
+    }
+
+    85% {
+        transform: translateX(-31vw) translateY(-31vh) scale(0.76);
+    }
+
+    90% {
+        transform: translateX(41vw) translateY(-22vh) scale(0.81);
+    }
+
+    95% {
+        transform: translateX(-30vw) translateY(40vh) scale(0.38);
+    }
+
+    100% {
+        transform: translateX(-4vw) translateY(8vh) scale(0.51);
+    }
+}
+
+.firefly:nth-child(11) {
+    animation-name: move11;
+}
+
+.firefly:nth-child(11)::before {
+    animation-duration: 18s;
+}
+
+.firefly:nth-child(11)::after {
+    animation-duration: 18s, 10336ms;
+    animation-delay: 0ms, 7458ms;
+}
+
+@keyframes move11 {
+    0% {
+        transform: translateX(-26vw) translateY(-36vh) scale(0.74);
+    }
+
+    5.26316% {
+        transform: translateX(37vw) translateY(33vh) scale(0.84);
+    }
+
+    10.52632% {
+        transform: translateX(4vw) translateY(-16vh) scale(0.5);
+    }
+
+    15.78947% {
+        transform: translateX(-21vw) translateY(-31vh) scale(0.48);
+    }
+
+    21.05263% {
+        transform: translateX(-33vw) translateY(9vh) scale(0.39);
+    }
+
+    26.31579% {
+        transform: translateX(13vw) translateY(-19vh) scale(0.52);
+    }
+
+    31.57895% {
+        transform: translateX(-44vw) translateY(-29vh) scale(0.41);
+    }
+
+    36.84211% {
+        transform: translateX(25vw) translateY(30vh) scale(0.75);
+    }
+
+    42.10526% {
+        transform: translateX(-16vw) translateY(36vh) scale(0.82);
+    }
+
+    47.36842% {
+        transform: translateX(-24vw) translateY(-30vh) scale(0.52);
+    }
+
+    52.63158% {
+        transform: translateX(-27vw) translateY(-9vh) scale(0.28);
+    }
+
+    57.89474% {
+        transform: translateX(-7vw) translateY(31vh) scale(0.67);
+    }
+
+    63.15789% {
+        transform: translateX(-27vw) translateY(-33vh) scale(0.73);
+    }
+
+    68.42105% {
+        transform: translateX(46vw) translateY(15vh) scale(0.61);
+    }
+
+    73.68421% {
+        transform: translateX(-10vw) translateY(50vh) scale(0.67);
+    }
+
+    78.94737% {
+        transform: translateX(-39vw) translateY(34vh) scale(0.31);
+    }
+
+    84.21053% {
+        transform: translateX(14vw) translateY(-17vh) scale(0.37);
+    }
+
+    89.47368% {
+        transform: translateX(-20vw) translateY(28vh) scale(0.41);
+    }
+
+    94.73684% {
+        transform: translateX(-32vw) translateY(23vh) scale(0.96);
+    }
+
+    100% {
+        transform: translateX(44vw) translateY(43vh) scale(0.66);
+    }
+}
+
+.firefly:nth-child(12) {
+    animation-name: move12;
+}
+
+.firefly:nth-child(12)::before {
+    animation-duration: 10s;
+}
+
+.firefly:nth-child(12)::after {
+    animation-duration: 10s, 6525ms;
+    animation-delay: 0ms, 2841ms;
+}
+
+@keyframes move12 {
+    0% {
+        transform: translateX(-45vw) translateY(-19vh) scale(0.73);
+    }
+
+    3.84615% {
+        transform: translateX(33vw) translateY(7vh) scale(0.41);
+    }
+
+    7.69231% {
+        transform: translateX(-22vw) translateY(36vh) scale(0.64);
+    }
+
+    11.53846% {
+        transform: translateX(10vw) translateY(33vh) scale(0.51);
+    }
+
+    15.38462% {
+        transform: translateX(-7vw) translateY(19vh) scale(0.93);
+    }
+
+    19.23077% {
+        transform: translateX(48vw) translateY(-5vh) scale(0.4);
+    }
+
+    23.07692% {
+        transform: translateX(49vw) translateY(-13vh) scale(0.77);
+    }
+
+    26.92308% {
+        transform: translateX(23vw) translateY(34vh) scale(0.61);
+    }
+
+    30.76923% {
+        transform: translateX(-11vw) translateY(-23vh) scale(0.27);
+    }
+
+    34.61538% {
+        transform: translateX(-46vw) translateY(-44vh) scale(0.78);
+    }
+
+    38.46154% {
+        transform: translateX(-12vw) translateY(-33vh) scale(0.84);
+    }
+
+    42.30769% {
+        transform: translateX(-19vw) translateY(49vh) scale(0.99);
+    }
+
+    46.15385% {
+        transform: translateX(45vw) translateY(-10vh) scale(0.36);
+    }
+
+    50% {
+        transform: translateX(-32vw) translateY(12vh) scale(0.8);
+    }
+
+    53.84615% {
+        transform: translateX(33vw) translateY(-40vh) scale(0.86);
+    }
+
+    57.69231% {
+        transform: translateX(-12vw) translateY(-18vh) scale(0.5);
+    }
+
+    61.53846% {
+        transform: translateX(-40vw) translateY(7vh) scale(0.39);
+    }
+
+    65.38462% {
+        transform: translateX(31vw) translateY(-19vh) scale(0.85);
+    }
+
+    69.23077% {
+        transform: translateX(-36vw) translateY(-9vh) scale(0.56);
+    }
+
+    73.07692% {
+        transform: translateX(-32vw) translateY(15vh) scale(0.57);
+    }
+
+    76.92308% {
+        transform: translateX(19vw) translateY(47vh) scale(0.81);
+    }
+
+    80.76923% {
+        transform: translateX(8vw) translateY(39vh) scale(0.61);
+    }
+
+    84.61538% {
+        transform: translateX(-28vw) translateY(-33vh) scale(0.61);
+    }
+
+    88.46154% {
+        transform: translateX(-43vw) translateY(-9vh) scale(0.75);
+    }
+
+    92.30769% {
+        transform: translateX(-22vw) translateY(-10vh) scale(0.96);
+    }
+
+    96.15385% {
+        transform: translateX(-34vw) translateY(14vh) scale(1);
+    }
+
+    100% {
+        transform: translateX(11vw) translateY(24vh) scale(0.3);
+    }
+}
+
+.firefly:nth-child(13) {
+    animation-name: move13;
+}
+
+.firefly:nth-child(13)::before {
+    animation-duration: 18s;
+}
+
+.firefly:nth-child(13)::after {
+    animation-duration: 18s, 5789ms;
+    animation-delay: 0ms, 1660ms;
+}
+
+@keyframes move13 {
+    0% {
+        transform: translateX(10vw) translateY(43vh) scale(0.61);
+    }
+
+    5% {
+        transform: translateX(-19vw) translateY(-18vh) scale(0.39);
+    }
+
+    10% {
+        transform: translateX(2vw) translateY(-19vh) scale(0.58);
+    }
+
+    15% {
+        transform: translateX(1vw) translateY(-19vh) scale(0.7);
+    }
+
+    20% {
+        transform: translateX(19vw) translateY(-12vh) scale(0.97);
+    }
+
+    25% {
+        transform: translateX(-23vw) translateY(-9vh) scale(0.5);
+    }
+
+    30% {
+        transform: translateX(-19vw) translateY(22vh) scale(0.8);
+    }
+
+    35% {
+        transform: translateX(-2vw) translateY(23vh) scale(0.91);
+    }
+
+    40% {
+        transform: translateX(25vw) translateY(-29vh) scale(0.57);
+    }
+
+    45% {
+        transform: translateX(4vw) translateY(-49vh) scale(0.77);
+    }
+
+    50% {
+        transform: translateX(45vw) translateY(20vh) scale(0.29);
+    }
+
+    55% {
+        transform: translateX(21vw) translateY(-25vh) scale(0.89);
+    }
+
+    60% {
+        transform: translateX(-44vw) translateY(37vh) scale(0.65);
+    }
+
+    65% {
+        transform: translateX(-26vw) translateY(-35vh) scale(1);
+    }
+
+    70% {
+        transform: translateX(49vw) translateY(1vh) scale(0.78);
+    }
+
+    75% {
+        transform: translateX(26vw) translateY(27vh) scale(0.5);
+    }
+
+    80% {
+        transform: translateX(-31vw) translateY(-45vh) scale(0.61);
+    }
+
+    85% {
+        transform: translateX(21vw) translateY(24vh) scale(0.37);
+    }
+
+    90% {
+        transform: translateX(18vw) translateY(-3vh) scale(0.85);
+    }
+
+    95% {
+        transform: translateX(26vw) translateY(-10vh) scale(0.76);
+    }
+
+    100% {
+        transform: translateX(-17vw) translateY(39vh) scale(0.96);
+    }
+}
+
+.firefly:nth-child(14) {
+    animation-name: move14;
+}
+
+.firefly:nth-child(14)::before {
+    animation-duration: 10s;
+}
+
+.firefly:nth-child(14)::after {
+    animation-duration: 10s, 9959ms;
+    animation-delay: 0ms, 772ms;
+}
+
+@keyframes move14 {
+    0% {
+        transform: translateX(-13vw) translateY(-1vh) scale(0.43);
+    }
+
+    3.57143% {
+        transform: translateX(46vw) translateY(-31vh) scale(0.87);
+    }
+
+    7.14286% {
+        transform: translateX(-33vw) translateY(-36vh) scale(0.8);
+    }
+
+    10.71429% {
+        transform: translateX(29vw) translateY(-12vh) scale(0.79);
+    }
+
+    14.28571% {
+        transform: translateX(-17vw) translateY(-28vh) scale(0.79);
+    }
+
+    17.85714% {
+        transform: translateX(-14vw) translateY(-29vh) scale(0.28);
+    }
+
+    21.42857% {
+        transform: translateX(24vw) translateY(12vh) scale(0.82);
+    }
+
+    25% {
+        transform: translateX(-31vw) translateY(21vh) scale(0.82);
+    }
+
+    28.57143% {
+        transform: translateX(48vw) translateY(-34vh) scale(0.72);
+    }
+
+    32.14286% {
+        transform: translateX(-9vw) translateY(3vh) scale(0.42);
+    }
+
+    35.71429% {
+        transform: translateX(-28vw) translateY(-36vh) scale(0.71);
+    }
+
+    39.28571% {
+        transform: translateX(-16vw) translateY(-42vh) scale(0.3);
+    }
+
+    42.85714% {
+        transform: translateX(17vw) translateY(-18vh) scale(0.58);
+    }
+
+    46.42857% {
+        transform: translateX(-1vw) translateY(-22vh) scale(0.8);
+    }
+
+    50% {
+        transform: translateX(-20vw) translateY(-42vh) scale(0.84);
+    }
+
+    53.57143% {
+        transform: translateX(50vw) translateY(25vh) scale(0.55);
+    }
+
+    57.14286% {
+        transform: translateX(44vw) translateY(-16vh) scale(0.48);
+    }
+
+    60.71429% {
+        transform: translateX(25vw) translateY(-41vh) scale(0.95);
+    }
+
+    64.28571% {
+        transform: translateX(23vw) translateY(27vh) scale(0.6);
+    }
+
+    67.85714% {
+        transform: translateX(27vw) translateY(46vh) scale(0.27);
+    }
+
+    71.42857% {
+        transform: translateX(-43vw) translateY(-2vh) scale(0.62);
+    }
+
+    75% {
+        transform: translateX(0vw) translateY(-1vh) scale(0.49);
+    }
+
+    78.57143% {
+        transform: translateX(2vw) translateY(11vh) scale(0.48);
+    }
+
+    82.14286% {
+        transform: translateX(46vw) translateY(-29vh) scale(0.4);
+    }
+
+    85.71429% {
+        transform: translateX(15vw) translateY(7vh) scale(0.82);
+    }
+
+    89.28571% {
+        transform: translateX(34vw) translateY(29vh) scale(0.38);
+    }
+
+    92.85714% {
+        transform: translateX(43vw) translateY(-15vh) scale(0.36);
+    }
+
+    96.42857% {
+        transform: translateX(7vw) translateY(2vh) scale(0.61);
+    }
+
+    100% {
+        transform: translateX(-36vw) translateY(42vh) scale(0.76);
+    }
+}
+
+.firefly:nth-child(15) {
+    animation-name: move15;
+}
+
+.firefly:nth-child(15)::before {
+    animation-duration: 15s;
+}
+
+.firefly:nth-child(15)::after {
+    animation-duration: 15s, 6129ms;
+    animation-delay: 0ms, 5637ms;
+}
+
+@keyframes move15 {
+    0% {
+        transform: translateX(32vw) translateY(49vh) scale(0.99);
+    }
+
+    5% {
+        transform: translateX(-37vw) translateY(-42vh) scale(1);
+    }
+
+    10% {
+        transform: translateX(46vw) translateY(47vh) scale(0.91);
+    }
+
+    15% {
+        transform: translateX(46vw) translateY(-37vh) scale(0.82);
+    }
+
+    20% {
+        transform: translateX(14vw) translateY(-9vh) scale(0.36);
+    }
+
+    25% {
+        transform: translateX(40vw) translateY(1vh) scale(0.99);
+    }
+
+    30% {
+        transform: translateX(-9vw) translateY(-26vh) scale(0.41);
+    }
+
+    35% {
+        transform: translateX(50vw) translateY(4vh) scale(0.88);
+    }
+
+    40% {
+        transform: translateX(5vw) translateY(32vh) scale(1);
+    }
+
+    45% {
+        transform: translateX(-11vw) translateY(0vh) scale(0.73);
+    }
+
+    50% {
+        transform: translateX(-5vw) translateY(-34vh) scale(0.65);
+    }
+
+    55% {
+        transform: translateX(3vw) translateY(4vh) scale(0.42);
+    }
+
+    60% {
+        transform: translateX(-39vw) translateY(18vh) scale(0.74);
+    }
+
+    65% {
+        transform: translateX(43vw) translateY(-35vh) scale(0.31);
+    }
+
+    70% {
+        transform: translateX(1vw) translateY(40vh) scale(0.99);
+    }
+
+    75% {
+        transform: translateX(-41vw) translateY(37vh) scale(0.74);
+    }
+
+    80% {
+        transform: translateX(-46vw) translateY(-10vh) scale(0.82);
+    }
+
+    85% {
+        transform: translateX(29vw) translateY(-9vh) scale(0.75);
+    }
+
+    90% {
+        transform: translateX(34vw) translateY(0vh) scale(0.93);
+    }
+
+    95% {
+        transform: translateX(32vw) translateY(-46vh) scale(0.83);
+    }
+
+    100% {
+        transform: translateX(-22vw) translateY(-45vh) scale(0.58);
+    }
+}
+
+@keyframes drift {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes flash {
+
+    0%,
+    30%,
+    100% {
+        opacity: 0;
+        box-shadow: 0 0 0vw 0vw #ff14ef;
+    }
+
+    5% {
+        opacity: 1;
+        box-shadow: 0 0 2vw 0.4vw #ff14ef;
     }
 }
