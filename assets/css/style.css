@@ -794,6 +794,12 @@ margin: 0 auto;
     box-shadow: 0 3px 24px rgb(0 0 0/10%);
     transition: all .5s ease-in-out
 }
+#scroll-top img{
+    margin-top: -6px;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
 
 @media all and (min-width:992px) {
     body {
@@ -1107,6 +1113,9 @@ button.navbar-toggler:focus {
     }
 
     .navbar-toggler-icon {
+        height: 36px;
+        width: 36px;
+        object-fit: contain;
         font-size: 32px;
         color: #fff;
         font-weight: 500;
@@ -3506,7 +3515,11 @@ button.timeline-nav-button:focus {
 }
 
 .download-btn-icon {
-    font-size: 35px
+    font-size: 35px;
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+
 }
 
 .download-text-subtitle {
