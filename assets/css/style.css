@@ -12,6 +12,21 @@
     margin: 0 auto;
 }
 
+img:not([src]):not([srcset]) {
+    visibility: hidden;
+  }
+
+  .lazy{
+      transition: opacity  ease 0.5s;
+      opacity: 0;
+  }
+  .lazy.loading{
+
+  }
+  .lazy.loaded{
+    opacity: 1;
+  }
+
 html,
 body {
     height: auto;
