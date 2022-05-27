@@ -20,9 +20,6 @@ img:not([src]):not([srcset]) {
       transition: opacity  ease 0.5s;
       opacity: 0;
   }
-  .lazy.loading{
-
-  }
   .lazy.loaded{
     opacity: 1;
   }
@@ -518,6 +515,7 @@ margin: 0 auto;
     .site-title {
         font-size: 35px
     }
+    
 }
 
 .pb-140 {
@@ -749,8 +747,7 @@ margin: 0 auto;
     z-index: 1;
     border: none;
     background-size: 200% 100%;
-    /* background-image: linear-gradient(to right, #518EFF 35%, #B725FF 88% ); */
-    background: linear-gradient(to right, #518EFFff 35%, #B725FFff 88%);
+    background: linear-gradient(to right, #518EFF 35%, #B725FF 88%);
     border: 2px solid  #B725FF;
     box-shadow: 0 3px 24px rgb(0 0 0/10%);
     transform: scale(1);
@@ -760,7 +757,7 @@ margin: 0 auto;
 .theme-btn:hover{
     /* transition: all ease 0.5s; */
     border: 2px solid  #B725FFff;
-    background: linear-gradient(to right, #518EFF00 35%, #B725FF00 88%);
+    background: #182072;
     transform: scale(1.04);
 
 }
@@ -1154,6 +1151,10 @@ button.navbar-toggler:focus {
 .align-items-center {
     display: flex;
     align-items: center;
+}
+.justify-content-center{
+    display: flex;
+    justify-content: center;
 }
 
 .hero-wrapper {
@@ -2903,7 +2904,7 @@ button.timeline-nav-button:focus {
 
 .blog-comments-content h5 {
     color: #fff;
-    font-size: 22px
+  font-size: 22px
 }
 
 .blog-comments-content span {
@@ -2928,24 +2929,55 @@ button.timeline-nav-button:focus {
     margin-left: 50px
 }
 
-.blog-comments-form {
+.send-form {
     padding: 30px;
     background-image: -moz-linear-gradient(180deg, rgb(92, 24, 232) 0%, rgb(192, 37, 243) 100%);
     background-image: -webkit-linear-gradient(180deg, rgb(92, 24, 232) 0%, rgb(192, 37, 243) 100%);
     background-image: -ms-linear-gradient(180deg, rgb(92, 24, 232) 0%, rgb(192, 37, 243) 100%);
     border-radius: 8px;
-    margin-top: 70px
 }
 
-.blog-comments-form h4 {
+.send-form h4 {
     margin-bottom: 20px
 }
 
-.blog-comments-form .form-group {
+.send-form .form-group {
     margin-bottom: 20px
 }
 
-.blog-comments-form .form-control {
+.select{
+    position: relative;
+}
+
+.select select.form-control{
+    padding-right: 44px;
+}
+
+.select::after {
+    content: " ";
+    pointer-events: none;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%) rotate(180deg) ;
+    transform-origin: center;
+    background: url(../img/icon/arrow-up.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 16px;
+    width: 16px;
+}
+
+.select .option{
+    display: inline-block;
+    padding: 15px 0;
+    margin: 15px 0;
+}
+
+
+.send-form .form-control {
     padding: 12px 20px;
     border-radius: 8px;
     box-shadow: none;
@@ -2955,11 +2987,11 @@ button.timeline-nav-button:focus {
     transition: all .5s ease-in-out
 }
 
-.blog-comments-form .form-control::placeholder {
+.send-form .form-control::placeholder {
     color: rgba(255, 255, 255, .5)
 }
 
-.blog-comments-form .form-control:focus {
+.send-form .form-control:focus {
     border-color: #00adff
 }
 
@@ -3280,6 +3312,9 @@ button.timeline-nav-button:focus {
         gap: 15px;
         margin-bottom: 30px
     }
+    .send-form{
+        padding: 24px 16px;
+    }
 }
 
 .team-area {
@@ -3496,6 +3531,8 @@ button.timeline-nav-button:focus {
 }
 
 @media all and (min-width:992px) and (max-width:1199px) {
+    
+    
     .rating-item {
         padding: 40px 10px 10px
     }
@@ -3525,14 +3562,13 @@ button.timeline-nav-button:focus {
 .download-text {
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column
 }
 
 .download-btn-icon {
-    font-size: 35px;
-    width: 36px;
-    height: 36px;
+    width: 24px;
+    height: 24px;
     object-fit: contain;
 
 }
@@ -4578,6 +4614,14 @@ button.timeline-nav-button:focus {
     font-weight: 400;
     color: #fff;
 }
+.small-sub-title{
+    font-family: roboto;
+    font-size: 20px;
+    line-height: 1.5;
+    text-transform: initial;
+    font-weight: 400;
+    color: #fff;
+}
 
 .home-2 .hero-wrapper .hero-title {
     text-transform: capitalize;
@@ -4675,6 +4719,7 @@ button.timeline-nav-button:focus {
         color: #00adff;
         background: 0 0
     }
+
 }
 
 .home-3 .bg {
