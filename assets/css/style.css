@@ -2944,6 +2944,9 @@ button.timeline-nav-button:focus {
 .send-form .form-success{
     display: none;
     margin: 16px 0;
+    opacity: 0;
+    transform: translateY(-20%);
+    transition: all ease 1s;
 }
 
 .send-form .form-success .icon{

@@ -96,7 +96,11 @@
                     this.enableFormInputs(formInputs);
                     this.formElem.classList.add('sent');
                     const successEl = this.formElem.querySelector('.form-success');
-                    successEl.classList.add('animate__fadeInUp')
+                    setTimeout(() => {
+                        successEl.style = 'transform: translateY(0); opacity: 1';
+                    }, 0)
+
+                    // successEl.classList.add(' animate__animated', 'animate__fadeInUp');
                     // document.location.href = './success.html';
                 }
 
